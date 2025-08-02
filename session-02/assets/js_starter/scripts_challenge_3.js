@@ -94,7 +94,20 @@ let onlyStudents = filterUsers.map(
     user => {
         document.getElementById('OutputField').innerHTML += `<li>${user.firstName}</li>`
     })
+
+let numbers = [1,2,3,4,5,6];
 // If true, filter out numbers less than 5
+if (numbers.includes(5)){
+
+    let filteredNumbers = numbers.filter((number) => number >= 5)
+
+    let squaredNumbers = filteredNumbers.map((number) => number * number)
+
+    console.log(squaredNumbers);
+    
+} else {
+    console.log("The number 5 is not there");
+}
 
 // Then square each number in the resulting array
 
