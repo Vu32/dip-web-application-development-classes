@@ -18,7 +18,8 @@ const userObject = {
 
   // Method to change the age property
 };
-
+ userObject.newAge = function(newAge){this.age = newAge};
 // Execute the method to change the age
-
+userObject.newAge(32);
 // Log the updated complexObject
+console.log(userObject);
