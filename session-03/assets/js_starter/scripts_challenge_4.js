@@ -21,7 +21,7 @@ function inputHandler(event) {
 function clearStorage() {
   let fields = form.elements;
 
-   for (let field of fields){
+  for (let field of fields) {
     localStorage.removeItem(prefix + field.id);
   }
 }
@@ -33,16 +33,15 @@ function loadSaved() {
   //
   let fields = form.elements;
 
-  for (let field of fields){
+  for (let field of fields) {
     let saved = localStorage.getItem(prefix + field.id);
     if (!saved) continue;
     field.value = saved;
   }
 }
 
-
+loadSaved();
 
 // Listen for DOM events
 form.addEventListener("input", inputHandler);
 form.addEventListener("submit", clearStorage);
-
