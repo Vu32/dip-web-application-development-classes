@@ -36,7 +36,7 @@ function deepClone(obj) {
 // const clone2 = deepClone(complexObject);
 // const clone3 = deepClone(complexObject);
 
-}
+
 const newAge1 = {age: 31};
 const newAge2 = {age: 2};
 
