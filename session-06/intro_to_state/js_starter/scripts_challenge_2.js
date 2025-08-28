@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Challenge - Stage 1
 let addBook = function(book) {
 // If there's no book to do, do nothing
@@ -40,7 +41,31 @@ let template = function(props){
 // Render the template into the UI
 let app = document.querySelector('#list');
 app.innerHTML = template(data);
+=======
+let data = {
+  books: ["Harry Potter I", "Harry Potter II", "Harry Potter III"],
+};
+
+// The template
+let template = function (props) {
+  let html =
+    "<ul>" +
+    props.books
+      .map(function (book) {
+        return "<li>" + book + "</li>";
+      })
+      .join("") +
+    "</ul>";
+
+  return html;
+};
+// Render the template into the UI
+let app = document.querySelector("#list");
+
+>>>>>>> upstream/2025S2
 // Update the UI
 data.books.push("Harry Potter IV");
 data.books.push("Harry Potter V");
+// data.books.pop();
+// data.books[1] = "Harry Potter V";
 app.innerHTML = template(data);
