@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const fetchApodButton = document.getElementById("fetch-apod");
   const apodContent = document.getElementById("apod-content");
+<<<<<<< HEAD
   const apiKey = "3QrSkJq5tFvbqC9I9UMUtmNIWcqfrZZAWL28yvzP";
+=======
+  const apiKey = "GurS0wJyr12na3jhvOraArdY3bGr64N2ovBUUTh5";
+>>>>>>> upstream/2025S2
 
   fetchApodButton.addEventListener("click", () => {
     const date = document.getElementById("date").value;
@@ -11,18 +15,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const thumbs = document.getElementById("thumbs").checked;
 
     let params = [];
+<<<<<<< HEAD
     if(count) params.push(`count=${count}`);
     if(startDate) params.push(startDate);
     if(endDate) params.push(endDate);
     if(date) params.push(date);
     if(thumbs) params.push(thumbs);
 
+=======
+    if (count) params.push(`count=${count}`);
+    if (startDate) params.push(`start_date=${startDate}`);
+    if (endDate) params.push(`end_date=${endDate}`);
+    if (date) params.push(`date=${date}`);
+    if (thumbs) params.push(`thumbs=${thumbs}`);
+>>>>>>> upstream/2025S2
 
     // Challenge 1
     // 1. check all the form fields to see which fields have data
     // 2. add them to the apiURL as parameters
     // 3. Test the responses in the Network tab
+<<<<<<< HEAD
     console.log(params);
+=======
+    // console.log(params);
+    let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+
+    apiUrl += `&${params.join("&")}`;
+    console.log(apiUrl);
+>>>>>>> upstream/2025S2
 
     let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
@@ -36,23 +56,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch(apiUrl, {
       method: "GET",
+<<<<<<< HEAD
       headers:{
         "Content-Type": "application/json",
         "Cache-Control": "no-cache",
       }
+=======
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache",
+      },
+>>>>>>> upstream/2025S2
     })
       // Challenge 3
-      // 1. change the anonymous arrow function below to check if the response code is 200(ok)
-      // 2. if the response is ok return the response.json() object
+
       // 3. if not ok throw a new error which includes the status code
       // 4. Test the responses in the Network tab
       .then((response) => {
+<<<<<<< HEAD
 
         if (response.ok){
           console.log(response)
           return response.json();
         } else {
           throw new Error(`${console.log(response)}`)
+=======
+        // 1. change the anonymous arrow function below to check if the response code is 200(ok)
+        // 2. if the response is ok return the response.json() object
+        if (response.ok) {
+          console.log(response);
+          return response.json();
+        } else {
+          throw new Error(`${console.log(response.status)}`);
+>>>>>>> upstream/2025S2
         }
       })
       .then((data) => {
