@@ -1,5 +1,5 @@
 import React from 'react';
-import { getUserInfo, formatSkills } from './utils/utils'; // Step 1 fix the import statement
+//import { getUserInfo, formatSkills } from './utils/utils'; // Step 1 fix the import statement
 
 function UserProfile(props) {
   // Step 2 create object correctly
@@ -15,7 +15,9 @@ function UserProfile(props) {
   // const formatSkills = function(skills) {
   //   return skills.map(() => skill.touppercase());
   // };
-  const formattedSkills = formatSkills(user.skills);
+  const formattedSkills = function(skills){
+    return skills.map(()=> skills.touppercase());
+  }
 
   // Step 4 destructure props properly
   const {firstName, lastName, age, isStudent, skills} = props;
@@ -27,7 +29,7 @@ function UserProfile(props) {
   // const formattedSkills = formatSkills(user.skills);
 
   // Use getUserInfo utility function to generate user info string
-  const userInfo = getUserInfo(user);
+  const formattedSkills = formatSkills(user.skills);
 
   return (
     <div>
