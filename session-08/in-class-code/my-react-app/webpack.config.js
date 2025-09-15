@@ -20,7 +20,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+<<<<<<< HEAD
       template: "./public/index.html",
+=======
+      template: "./src/index.html", // Use your own HTML template
+      
+>>>>>>> b4223565e03ef8af692226a4457855efda406c2a
     }),
   ],
   devServer: {

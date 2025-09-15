@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_STORE
 node_modules
 scripts/flow/*/.flowconfig
@@ -37,3 +38,6 @@ packages/react-devtools-fusebox/dist
 packages/react-devtools-inline/dist
 packages/react-devtools-shell/dist
 packages/react-devtools-timeline/dist
+=======
+node_modules/
+>>>>>>> b4223565e03ef8af692226a4457855efda406c2a

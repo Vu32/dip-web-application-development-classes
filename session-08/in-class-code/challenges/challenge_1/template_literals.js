@@ -19,7 +19,7 @@ const userObject = {
 
 // The following greeting message uses template literals incorrectly.
 const getUserInfo = () => {
-  return "Name: {user.firstName} {user.lastName}, Age: {user.age}";
+  return `Name: ${userObject.firstName} ${userObject.lastName} Age: ${userObject.age}`;
 };
 
 // Fix the template literal syntax.

@@ -29,20 +29,20 @@ const {
 } = userObject;
 
 // This doesnt look right!
-const street = address.street;
-const twitterHandle = socialProfiles.twitter;
+const street = userObject.address.street;
+const twitterHandle = userObject.socialProfiles.twitter;
 
 const greeting =
   "Hello, my name is " +
-  firstname +
+  firstName +
   " " +
-  lastname +
+  lastName +
   ". I am " +
   yearsOld +
   " years old, living on " +
   street +
   ". You can find me on Twitter as " +
-  twitterhandle +
+  twitterHandle +
   ".";
 
 console.log(greeting);

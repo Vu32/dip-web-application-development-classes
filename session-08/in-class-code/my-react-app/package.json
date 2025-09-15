@@ -7,7 +7,9 @@
     "start": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
-  "keywords": [],
+  "keywords": [
+    "react"
+  ],
   "author": "",
   "license": "ISC",
   "description": "First, create a new directory for your project and navigate into it:",
