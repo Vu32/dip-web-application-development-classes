@@ -1,22 +1,47 @@
-// Challenge 3 Book constructor
+// // Challenge 3 Book constructor
+// const userObject = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 30,
+//   isStudent: false,
+//   address: {
+//     street: "123 Main St",
+//     city: "Perth",
+//     zipCode: "6000",
+//   },
+//   skills: ["JavaScript", "HTML", "CSS"],
+//   socialProfiles: {
+//     twitter: "@johndoe",
+//     linkedIn: "linkedin.com/in/johndoe",
+//   },
+//   isEmployed: true,
+//   addSkills(newSkill) {
+//     this.skills.push(newSkill);
+//     console.log(this.skills.map((skill) => `<li>${skill}</li>`));
+//   },
+// };
 
 // Creating instances using the Book constructor
-function displayInfo(author, title, price) {
-    this.author = author;
-    this.title = title;
-    this.price = price;
+function UserObject(firstName, age, isStudent, newSkill) {
+  this.firstName = firstName;
+  this.age = age;
+  this.student = isStudent;
+  this.newSkill = newSkill;
+  this.skills = [];
+  this.addSkill = function addSkills(newSkill) {
+    this.skills.push(newSkill);
+  };
+
+  this.displayInfo = function () {
+    console.log(
+      `${this.firstName} is ${this.age} and has ${this.skills.length} skills`
+    );
+  };
 }
 
-const book1 = new displayInfo (
-    'J.K. Rowling',
-    'Harry Potter I',
-    '$19.95',
-);
-const book2 = new displayInfo (
-    'Jane Doe',
-    'Jane Austin',
-    '$20.00',
-);
-// Displaying book information
-book1.displayInfo();
-book2.displayInfo();
+let user = new UserObject("John", 52, false, "MQTT");
+user.addSkill("JS");
+user.displayInfo();
+// // Displaying book information
+// book1.displayInfo();
+// book2.displayInfo();
