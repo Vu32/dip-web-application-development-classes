@@ -98,14 +98,16 @@ const sculptureList = [
 ];
 
 const app = document.getElementById("app");
-
+// debugger;
 function Header({ title }) {
   return <h1>{title ? title : "Default title"}</h1>;
 }
 
 function Gallery() {
   const { useState } = React;
+  debugger;
   const [index, setIndex] = useState(0);
+  console.log(index);
 
   function handleClick() {
     // Loop back to the first sculpture

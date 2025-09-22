@@ -12,12 +12,12 @@
       {
         /* Run and then move the code inside the Homepage component */
       }
-      const [likes, setLikes] = React.useState(0);
+      // const [likes, setLikes] = React.useState(0);
 
-      function handleClick() {
-        setLikes(likes + 1);
-      }
-
+      // function handleClick() {
+        // setLikes(likes + 1);
+      // }
+// 
       function Header({ title }) {
         return <h1>{title ? title : "Default title"}</h1>;
       }
@@ -29,7 +29,11 @@
         {
           /* Console log the component and review the added React Hooks object */
         }
+     const [likes, setLikes] = React.useState(0);
 
+      function handleClick() {
+         setLikes(likes + 1);
+       }
         const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
 
         return (
