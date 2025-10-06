@@ -6,6 +6,8 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
+    clean: true,
   },
   module: {
     rules: [
@@ -16,14 +18,6 @@ module.exports = {
           loader: "babel-loader",
         },
       },
-      // part of activity 1
-      {
-        test: /\.css$/, // Match any .css file
-        use: [
-          "style-loader", // Injects CSS into the DOM
-          "css-loader", // Turns CSS into CommonJS
-        ],
-      },
     ],
   },
   plugins: [
@@ -32,10 +26,15 @@ module.exports = {
     }),
   ],
   devServer: {
+    port: 3000,
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, "public"),
     },
     compress: true,
-    port: 3000,
+    headers: {
+      "Content-Security-Policy":
+        "default-src 'self'; script-src 'self' 'unsafe-eval'; connect-src 'self' http://localhost:3000;",
+    },
+    historyApiFallback: true,
   },
 };
